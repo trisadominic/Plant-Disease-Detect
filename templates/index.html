@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Logo Box -->
+    <div class="logo-box">
+        <img src="{{ url_for('static', filename='images/im.png') }}" alt="LeafGuard Logo">
+    </div>
+
+    <!-- Centered Content Box -->
+    <div class="content-box">
+        <h1>Plant Disease Detect</h1>
+
+        <!-- Image Upload Section -->
+        <div id="imagePreview" class="preview-box">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" id="uploadLabel">Choose an image</label>
+            <img id="previewImage" src="" alt="Preview">
+        </div>
+
+        <!-- Analyze Button -->
+        <button id="analyzeBtn">Analyze</button>
+
+        <!-- Result Display -->
+        <p id="result"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
